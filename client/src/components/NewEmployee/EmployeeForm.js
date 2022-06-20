@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./EmployeeForm.css";
 
-const EmployeeForm = () => {
+const EmployeeForm = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredStreet, setEnteredStreet] = useState("");
   const [enteredCity, setEnteredCity] = useState("");
@@ -126,7 +126,7 @@ const EmployeeForm = () => {
       year: enteredYear,
       position: enteredPosition,
     };
-    console.log(employeeData);
+    props.onSaveEmployeeData(employeeData);
     setEnteredName("");
     setEnteredStreet("");
     setEnteredCity("");

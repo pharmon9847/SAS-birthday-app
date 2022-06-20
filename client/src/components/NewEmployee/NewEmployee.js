@@ -2,10 +2,17 @@ import React from "react";
 import EmployeeForm from "./EmployeeForm";
 import "./NewEmployee.css";
 
-const NewEmployee = () => {
+const NewEmployee = (props) => {
+  const saveEmployeeDataHandler = (enteredEmployeeData) => {
+    const employeeData = {
+      ...enteredEmployeeData,
+      id: Math.random().toString(),
+    };
+    props.onAddEmployee(employeeData);
+  };
   return (
     <div className="new-employee">
-      <EmployeeForm />
+      <EmployeeForm onSaveEmployeeData={saveEmployeeDataHandler} />
     </div>
   );
 };

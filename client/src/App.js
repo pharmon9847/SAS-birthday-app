@@ -220,9 +220,14 @@ const App = () => {
       position: "Sales",
     },
   ];
+
+  const addEmployeeHandler = (employee) => {
+    console.log("In App.js");
+    console.log(employee);
+  };
   return (
     <div>
-      <NewEmployee />
+      <NewEmployee onAddEmployee={addEmployeeHandler} />
       <DunderMifflinEmployees employees={employees} />
     </div>
   );
