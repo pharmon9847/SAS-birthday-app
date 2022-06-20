@@ -49,19 +49,29 @@
     font-size: 1.25rem;
   }
 
-  .employee-record__street {
+  .employee-record__address {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .employee-record__address_street {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
-  .employee-record__city {
+  .employee-record__address_city {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
-  .employee-record__state {
+  .employee-record__address_state {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
-  .employee-record__zip {
+  .employee-record__address_zip {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
@@ -85,5 +95,31 @@
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
+  }
+  .employee-birthday {
+    display: flex;
+    flex-direction: column;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: 1px solid #ececec;
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .employee-birthday__DOB_month {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  .employee-birthday__DOB_year {
+    font-size: 0.75rem;
+  }
+
+  .employee-birthday__DOB_day {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
