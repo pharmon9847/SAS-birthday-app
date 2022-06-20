@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import "./EmployeeForm.css";
 
 const EmployeeForm = () => {
-  const [enteredName, SetEnteredName] = useState("");
-  const [enteredStreet, SetEnteredStreet] = useState("");
-  const [enteredCity, SetEnteredCity] = useState("");
-  const [enteredState, SetEnteredState] = useState("");
-  const [enteredZip, SetEnteredZip] = useState("");
-  const [enteredMonth, SetEnteredMonth] = useState("");
-  const [enteredDay, SetEnteredDay] = useState("");
-  const [enteredYear, SetEnteredYear] = useState("");
-  const [enteredPosition, SetEnteredPosition] = useState("");
+  const [enteredName, setEnteredName] = useState("");
+  const [enteredStreet, setEnteredStreet] = useState("");
+  const [enteredCity, setEnteredCity] = useState("");
+  const [enteredState, setEnteredState] = useState("");
+  const [enteredZip, setEnteredZip] = useState("");
+  const [enteredMonth, setEnteredMonth] = useState("");
+  const [enteredDay, setEnteredDay] = useState("");
+  const [enteredYear, setEnteredYear] = useState("");
+  const [enteredPosition, setEnteredPosition] = useState("");
   //   const [userInput, setUserInput] = useState({
   //     enteredName: "",
   //     enteredStreet: "",
@@ -23,7 +23,7 @@ const EmployeeForm = () => {
   //   });
 
   const nameChangeHandler = (event) => {
-    SetEnteredName(event.target.value);
+    setEnteredName(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredName: event.target.value,
@@ -33,7 +33,7 @@ const EmployeeForm = () => {
     // });
   };
   const streetChangeHandler = (event) => {
-    SetEnteredStreet(event.target.value);
+    setEnteredStreet(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredStreet: event.target.value,
@@ -43,7 +43,7 @@ const EmployeeForm = () => {
     // });
   };
   const cityChangeHandler = (event) => {
-    SetEnteredCity(event.target.value);
+    setEnteredCity(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredCity: event.target.value,
@@ -53,7 +53,7 @@ const EmployeeForm = () => {
     // });
   };
   const stateChangeHandler = (event) => {
-    SetEnteredState(event.target.value);
+    setEnteredState(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredState: event.target.value,
@@ -63,7 +63,7 @@ const EmployeeForm = () => {
     // });
   };
   const zipChangeHandler = (event) => {
-    SetEnteredZip(event.target.value);
+    setEnteredZip(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredZip: event.target.value,
@@ -73,7 +73,7 @@ const EmployeeForm = () => {
     // });
   };
   const monthChangeHandler = (event) => {
-    SetEnteredMonth(event.target.value);
+    setEnteredMonth(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredMonth: event.target.value,
@@ -83,7 +83,7 @@ const EmployeeForm = () => {
     // });
   };
   const dayChangeHandler = (event) => {
-    SetEnteredDay(event.target.value);
+    setEnteredDay(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredDay: event.target.value,
@@ -93,7 +93,7 @@ const EmployeeForm = () => {
     // });
   };
   const yearChangeHandler = (event) => {
-    SetEnteredYear(event.target.value);
+    setEnteredYear(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredYear: event.target.value,
@@ -103,7 +103,7 @@ const EmployeeForm = () => {
     // });
   };
   const positionChangeHandler = (event) => {
-    SetEnteredPosition(event.target.value);
+    setEnteredPosition(event.target.value);
     // setUserInput({
     //   ...userInput,
     //   enteredPosition: event.target.value,
@@ -127,45 +127,70 @@ const EmployeeForm = () => {
       position: enteredPosition,
     };
     console.log(employeeData);
+    setEnteredName("");
+    setEnteredStreet("");
+    setEnteredCity("");
+    setEnteredState("");
+    setEnteredZip("");
+    setEnteredMonth("");
+    setEnteredDay("");
+    setEnteredYear("");
+    setEnteredPosition("");
   };
   return (
     <form onSubmit={submitHandler}>
       <div className="new-employee__controls">
         <div className="new-employee__control">
           <label>Name</label>
-          <input type="text" onChange={nameChangeHandler} />
+          <input type="text" value={enteredName} onChange={nameChangeHandler} />
         </div>
         <div className="new-employee__control">
           <label>Street</label>
-          <input type="text" onChange={streetChangeHandler} />
+          <input
+            type="text"
+            value={enteredStreet}
+            onChange={streetChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>City</label>
-          <input type="text" onChange={cityChangeHandler} />
+          <input type="text" value={enteredCity} onChange={cityChangeHandler} />
         </div>
         <div className="new-employee__control">
           <label>State</label>
-          <input type="text" onChange={stateChangeHandler} />
+          <input
+            type="text"
+            value={enteredState}
+            onChange={stateChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>Zip</label>
-          <input type="text" onChange={zipChangeHandler} />
+          <input type="text" value={enteredZip} onChange={zipChangeHandler} />
         </div>
         <div className="new-employee__control">
           <label>Month</label>
-          <input type="text" onChange={monthChangeHandler} />
+          <input
+            type="text"
+            value={enteredMonth}
+            onChange={monthChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>Day</label>
-          <input type="text" onChange={dayChangeHandler} />
+          <input type="text" value={enteredDay} onChange={dayChangeHandler} />
         </div>
         <div className="new-employee__control">
           <label>Year</label>
-          <input type="text" onChange={yearChangeHandler} />
+          <input type="text" value={enteredYear} onChange={yearChangeHandler} />
         </div>
         <div className="new-employee__control">
           <label>Position</label>
-          <input type="text" onChange={positionChangeHandler} />
+          <input
+            type="text"
+            value={enteredPosition}
+            onChange={positionChangeHandler}
+          />
         </div>
       </div>
       <div className="new-employee__actions">
