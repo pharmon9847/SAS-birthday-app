@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import EmployeeRecord from "./EmployeeRecord";
+import EmployeeFilter from "./EmployeeFilter";
 import "./DunderMifflinEmployees.css";
 
 const DunderMifflinEmployees = (props) => {
+  const [filteredMonth, setFilteredMonth] = useState("January");
+  const filterChangeHandler = (selectedMonth) => {
+    setFilteredMonth(selectedMonth);
+    console.log("DunderMifflinEmployees.js");
+    console.log(selectedMonth);
+  };
   return (
     <div>
       <div className="dunder-mifflin-employees">
+        <div>
+          <EmployeeFilter
+            selected={filteredMonth}
+            onChangeFilter={filterChangeHandler}
+          />
+        </div>
         <EmployeeRecord
           name={props.employees[0].name}
           street={props.employees[0].street}
