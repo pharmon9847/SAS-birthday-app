@@ -1,10 +1,10 @@
+import React from "react";
 import EmployeeRecord from "./EmployeeRecord";
 import "./DunderMifflinEmployees.css";
 
-function DunderMifflinEmployees(props) {
+const DunderMifflinEmployees = (props) => {
   return (
     <div>
-      <h2>Let's get started!</h2>
       <div className="dunder-mifflin-employees">
         <EmployeeRecord
           name={props.employees[0].name}
@@ -207,6 +207,6 @@ function DunderMifflinEmployees(props) {
       </div>
     </div>
   );
-}
+};
 
 export default DunderMifflinEmployees;

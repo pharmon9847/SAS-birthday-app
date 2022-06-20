@@ -1,5 +1,7 @@
+import React from "react";
 import DunderMifflinEmployees from "./components/DunderMifflinEmployees";
-function App() {
+import NewEmployee from "./components/NewEmployee/NewEmployee";
+const App = () => {
   const employees = [
     {
       id: "e1",
@@ -218,7 +220,12 @@ function App() {
       position: "Sales",
     },
   ];
-  return <DunderMifflinEmployees employees={employees} />;
-}
+  return (
+    <div>
+      <NewEmployee />
+      <DunderMifflinEmployees employees={employees} />
+    </div>
+  );
+};
 
 export default App;

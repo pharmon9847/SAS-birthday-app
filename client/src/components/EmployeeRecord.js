@@ -1,6 +1,20 @@
+import React, { useState } from "react";
 import "./EmployeeRecord.css";
 
-function EmployeeRecord(props) {
+const EmployeeRecord = (props) => {
+  const [name, setName] = useState(props.name);
+  const [street, setStreet] = useState(props.street);
+  const [city, setCity] = useState(props.city);
+  const [state, setState] = useState(props.state);
+  const [zip, setZip] = useState(props.zip);
+  const [DOB_month, setDOB_month] = useState(props.DOB_month);
+  const [DOB_day, setDOB_day] = useState(props.DOB_day);
+  const [DOB_year, setDOB_year] = useState(props.DOB_year);
+  const [position, setPosition] = useState(props.position);
+  const clickHandler = () => {
+    setName("updated!");
+    console.log(name);
+  };
   return (
     <div className="employee-record">
       <div className="employee-record__description">
@@ -18,8 +32,9 @@ function EmployeeRecord(props) {
         </div>
         <div className="employee-record__position">{props.position}</div>
       </div>
+      <button onClick={clickHandler}>Change Employee</button>
     </div>
   );
-}
+};
 
 export default EmployeeRecord;
