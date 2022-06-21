@@ -32,7 +32,6 @@ const EmployeeRecord = (props) => {
         </div>
         <div className="employee-record__position">{props.position}</div>
       </div>
-      <button onClick={clickHandler}>Change Employee</button>
     </div>
   );
 };

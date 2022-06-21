@@ -142,58 +142,90 @@ const EmployeeForm = (props) => {
       <div className="new-employee__controls">
         <div className="new-employee__control">
           <label>Name</label>
-          <input type="text" value={enteredName} onChange={nameChangeHandler} />
+          <input
+            type="text"
+            value={enteredName}
+            placeholder="name"
+            onChange={nameChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>Street</label>
           <input
             type="text"
             value={enteredStreet}
+            placeholder="street address"
             onChange={streetChangeHandler}
           />
         </div>
         <div className="new-employee__control">
           <label>City</label>
-          <input type="text" value={enteredCity} onChange={cityChangeHandler} />
+          <input
+            type="text"
+            value={enteredCity}
+            placeholder="city"
+            onChange={cityChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>State</label>
           <input
             type="text"
             value={enteredState}
+            placeholder="state (ex. NC)"
             onChange={stateChangeHandler}
           />
         </div>
         <div className="new-employee__control">
           <label>Zip</label>
-          <input type="text" value={enteredZip} onChange={zipChangeHandler} />
+          <input
+            type="text"
+            value={enteredZip}
+            placeholder="zip"
+            onChange={zipChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>Month</label>
           <input
             type="text"
             value={enteredMonth}
+            placeholder="DOB-month (ex. January)"
             onChange={monthChangeHandler}
           />
         </div>
         <div className="new-employee__control">
           <label>Day</label>
-          <input type="text" value={enteredDay} onChange={dayChangeHandler} />
+          <input
+            type="text"
+            value={enteredDay}
+            placeholder="DOB-day"
+            onChange={dayChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>Year</label>
-          <input type="text" value={enteredYear} onChange={yearChangeHandler} />
+          <input
+            type="text"
+            value={enteredYear}
+            placeholder="DOB-year"
+            onChange={yearChangeHandler}
+          />
         </div>
         <div className="new-employee__control">
           <label>Position</label>
           <input
             type="text"
             value={enteredPosition}
+            placeholder="position"
             onChange={positionChangeHandler}
           />
         </div>
       </div>
       <div className="new-employee__actions">
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Employee</button>
       </div>
     </form>
