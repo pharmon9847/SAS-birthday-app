@@ -21,6 +21,7 @@ const DunderMifflinEmployees = (props) => {
         </div>
         {props.employees.map((employee) => (
           <EmployeeRecord
+            key={employee.id}
             name={employee.name}
             street={employee.street}
             city={employee.city}
