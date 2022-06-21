@@ -75,15 +75,15 @@
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
-  .employee-record__DOB_month {
+  .employee-record__month {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
-  .employee-record__DOB_day {
+  .employee-record__day {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
-  .employee-record__DOB_year {
+  .employee-record__year {
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
@@ -109,16 +109,16 @@
     justify-content: center;
   }
 
-  .employee-birthday__DOB_month {
+  .employee-birthday__month {
     font-size: 0.75rem;
     font-weight: bold;
   }
 
-  .employee-birthday__DOB_year {
+  .employee-birthday__year {
     font-size: 0.75rem;
   }
 
-  .employee-birthday__DOB_day {
+  .employee-birthday__day {
     font-size: 1.5rem;
     font-weight: bold;
   }
