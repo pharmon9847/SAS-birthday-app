@@ -10,6 +10,10 @@ const DunderMifflinEmployees = (props) => {
     console.log("DunderMifflinEmployees.js");
     console.log(selectedMonth);
   };
+
+  const filteredEmployees = props.employees.filter((employee) => {
+    return employee.month === filteredMonth;
+  });
   return (
     <div>
       <div className="dunder-mifflin-employees">
@@ -19,7 +23,7 @@ const DunderMifflinEmployees = (props) => {
             onChangeFilter={filterChangeHandler}
           />
         </div>
-        {props.employees.map((employee) => (
+        {filteredEmployees.map((employee) => (
           <EmployeeRecord
             key={employee.id}
             name={employee.name}
