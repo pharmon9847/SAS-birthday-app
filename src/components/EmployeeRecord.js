@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "./EmployeeRecord.css";
 
+// create properties for Employee record so the data can be passed on
 const EmployeeRecord = (props) => {
-  const [name, setName] = useState(props.name);
-  const [street, setStreet] = useState(props.street);
-  const [city, setCity] = useState(props.city);
-  const [state, setState] = useState(props.state);
-  const [zip, setZip] = useState(props.zip);
-  const [month, setMonth] = useState(props.month);
-  const [day, setDay] = useState(props.day);
-  const [year, setYear] = useState(props.year);
-  const [position, setPosition] = useState(props.position);
-  const clickHandler = () => {
-    setName("updated!");
-    console.log(name);
-  };
+  // const [name, setName] = useState(props.name);
+  // const [street, setStreet] = useState(props.street);
+  // const [city, setCity] = useState(props.city);
+  // const [state, setState] = useState(props.state);
+  // const [zip, setZip] = useState(props.zip);
+  // const [month, setMonth] = useState(props.month);
+  // const [day, setDay] = useState(props.day);
+  // const [year, setYear] = useState(props.year);
+  // const [position, setPosition] = useState(props.position);
+  // const clickHandler = () => {
+  //   setName("updated!");
+  //   console.log(name);
+  // };
+
+  // use {} to run JavaScript expressions
+  // using {props.name} points to the "name" property
   return (
     <div className="employee-record">
       <div className="employee-record__description">

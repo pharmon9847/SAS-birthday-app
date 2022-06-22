@@ -1,7 +1,12 @@
+// import React and { useState } in order to manange component states
 import React, { useState } from "react";
+// import DunderMifflinEmployees to get access to that component
 import DunderMifflinEmployees from "./components/DunderMifflinEmployees";
+// import NewEmployee to get access to that component
 import NewEmployee from "./components/NewEmployee/NewEmployee";
 
+// The list of employees for the app
+// Until a connection to a database is developed, these are the only employees for the app
 const INITIAL_EMPLOYEES = [
   {
     id: "e1",
@@ -976,16 +981,21 @@ const INITIAL_EMPLOYEES = [
     position: "Payment Adjustment Coordinator",
   },
 ];
+// arrow function creating the App component
+// use the useState function to get all the employees in the INITIAL_EMPLOYEES object
 const App = () => {
   const [employees, setEmployees] = useState(INITIAL_EMPLOYEES);
 
+  // create an addEmployeeHandler function that the NewEmployee component points to
   const addEmployeeHandler = (employee) => {
     setEmployees((prevEmployees) => {
       return [employee, ...prevEmployees];
     });
-    console.log("In App.js");
-    console.log(employee);
+    // console.log("In App.js");
+    // console.log(employee);
   };
+  // use component NewEmployee
+  //use component DunderMifflinEmployees
   return (
     <div>
       <NewEmployee onAddEmployee={addEmployeeHandler} />

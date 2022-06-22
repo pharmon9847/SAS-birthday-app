@@ -1,6 +1,8 @@
+// import React and { useState } in order to manange component states
 import React, { useState } from "react";
 import "./EmployeeForm.css";
 
+// create separate states for section of the form
 const EmployeeForm = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredStreet, setEnteredStreet] = useState("");
@@ -22,6 +24,7 @@ const EmployeeForm = (props) => {
   //     enteredPosition: "",
   //   });
 
+  // a function to handle the name change event
   const nameChangeHandler = (event) => {
     setEnteredName(event.target.value);
     // setUserInput({
@@ -32,6 +35,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredName: event.target.value };
     // });
   };
+  // a function to handle the street change event
   const streetChangeHandler = (event) => {
     setEnteredStreet(event.target.value);
     // setUserInput({
@@ -42,6 +46,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredStreet: event.target.value };
     // });
   };
+  // a function to handle the city change event
   const cityChangeHandler = (event) => {
     setEnteredCity(event.target.value);
     // setUserInput({
@@ -52,6 +57,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredCity: event.target.value };
     // });
   };
+  // a function to handle the state change event
   const stateChangeHandler = (event) => {
     setEnteredState(event.target.value);
     // setUserInput({
@@ -62,6 +68,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredState: event.target.value };
     // });
   };
+  // a function to handle the zip change event
   const zipChangeHandler = (event) => {
     setEnteredZip(event.target.value);
     // setUserInput({
@@ -72,6 +79,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredZip: event.target.value };
     // });
   };
+  // a function to handle the month change event
   const monthChangeHandler = (event) => {
     setEnteredMonth(event.target.value);
     // setUserInput({
@@ -82,6 +90,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredMonth: event.target.value };
     // });
   };
+  // a function to handle the day change event
   const dayChangeHandler = (event) => {
     setEnteredDay(event.target.value);
     // setUserInput({
@@ -92,6 +101,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredDay: event.target.value };
     // });
   };
+  // a function to handle the year change event
   const yearChangeHandler = (event) => {
     setEnteredYear(event.target.value);
     // setUserInput({
@@ -102,6 +112,7 @@ const EmployeeForm = (props) => {
     //   return { ...prevState, enteredYear: event.target.value };
     // });
   };
+  // a fucntion to handle the position change event
   const positionChangeHandler = (event) => {
     setEnteredPosition(event.target.value);
     // setUserInput({
@@ -137,6 +148,7 @@ const EmployeeForm = (props) => {
     setEnteredYear("");
     setEnteredPosition("");
   };
+  // the employee form with the pointers to all the change handlers from above
   return (
     <form onSubmit={submitHandler}>
       <div className="new-employee__controls">

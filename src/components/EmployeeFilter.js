@@ -2,11 +2,15 @@ import React from "react";
 
 import "./EmployeeFilter.css";
 
+// use properties to transfer data
 const EmployeeFilter = (props) => {
+  // the dropdownChangeHandler function that the dropdown box element points to
   const dropdownChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
+  // the dropdown box with the months to select
+  // contains a pointer to the dropdownChangeHandler function
   return (
     <div className="employee-filter">
       <div className="employee-filter__control">
