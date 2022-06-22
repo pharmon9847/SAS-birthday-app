@@ -1,10 +1,10 @@
 # SAS-birthday-app
 
 *OVERVIEW*
-The goal for this app was to create a UI that allows users to enter new employees and then be able to dynamically see all the employees that have birthdays in a given month. The app should allow for some user input of some kind.
+  The goal for this app was to create a UI that allows users to enter new employees and then be able to dynamically see all the employees that have         birthdays in a given month. The app should allow for some user input of some kind.
 
 *END RESULT*
-A web app was created which allows a user to enter a new employee. This new employee can then be filtered by their birth month. All employees in the employee object are filtered and only the employees that match the selected month are shown in the list.
+  A web app was created which allows a user to enter a new employee. This new employee can then be filtered by their birth month. All employees in the     employee object are filtered and only the employees that match the selected month are shown in the list.
 
 *THE JOURNEY*
   - I began by researching possible stacks I could use.
