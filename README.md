@@ -1,18 +1,37 @@
 # SAS-birthday-app
 
-The goal for this app was to create a UI that allows users to enter new employees and then be able to dynamically see all the employees that have birthdays in a given month.
+*OVERVIEW*
+The goal for this app was to create a UI that allows users to enter new employees and then be able to dynamically see all the employees that have birthdays in a given month. The app should allow for some user input of some kind.
 
-By using a dropdown list, the user can filter through months and see all the employees that have birthdays in the chosen month.
+*END RESULT*
+A web app was created which allows a user to enter a new employee. This new employee can then be filtered by their birth month. All employees in the employee object are filtered and only the employees that match the selected month are shown in the list.
 
-The app was built using the React framework and started using the command "npx create-react-app"
+*THE JOURNEY*
+  - I began by researching possible stacks I could use.
+  - I have used Angular in the past, in particular as I was developing Custom Controls for Visual Investigator 10.8
+  - Knowing that the team I was talking to used React, I decided to work with a MERN stack.
+  - I have used MongoDB in the past and I am using a MongoDB Atlas database for a website that is currently live: http://www.nc-beer-map.com/
+  - In preparation for utilizing the full stack, I spent some time working through this tutorial: https://www.mongodb.com/languages/mern-stack-tutorial
+  - I visited the site: https://www.mockaroo.com/ to produce dummy records in the form of .csv files that I could upload into MongoDB collections in          order to populate the app that I built with the tutorial I previously mentioned
+  - When I successfully completed the backend prep, I set my sights on learning React
+  - I spent most of last week going through different parts of a Udemy course on React
+  - After several trial runs, I got my birthday app where I wanted it as far as the React side
+  - All of my attempts to connect my React app to a backend failed
+  - Rather than waste more time, I hard coded more employees into the React app 
 
-*Testing
-  - The app was tested manually
-  - Based on the small size of the app and the limited functionality, no unit tests or integration tests were done. Also no end-to-end test were done.
+*TESTING*
+  - Testing is new to me and therefore an unfamiliar area
+  - I have never built anything to the scale that it needed to be tested besides the manual testing done with a development server up and running
+  - This React app was tested manually
+  - Based on the small size of the app and the limited functionality, no unit tests or integration tests were done. Also no end-to-end test were done
+  - I constantly pushed my code to my Github repo so that as I manually tested and broke my app, I could revert back to my last working version
  
- *Challenges
-  -The biggest challenge I faced was learning React and translating what I learned into a workable app
+ *CHALLENGES*
+  - Don't boil the ocean!
+  - My biggest challenge was remaining on task and producing small deliverables
+  - Learning new technologies, frameworks and methodologies in a small timeframe is very challenging and keeping focus is of upmost importance
   
-  *Improvements
-  - The biggest improvement I would make is connecting it to a database. I have a MongoDB database with 500 employees that I wanted to connect to the app.      I also wanted to be able to store the employees that were saved in the App, rather than losing them each time the page was refreshed.
-  - I also thought that having other filters would make for a more useable app, such as filtering for cities or positions.
+  
+  *IMPROVEMENTS*
+  - The biggest improvement would be to connect a database in order to store new data and retrieve old data. Hard coding employees into the code was my       last resort, but one I had to use to make the app functional
+  - I would also like to improve the UI by adding different filters, for position and city, for example
